@@ -1,9 +1,9 @@
-#budget-tracker
+# budget-tracker
 
-##client
+## client
 
 Using Angular 17 (standalone).
 
-##server
+## server
 
 Node.js, Express, MongoDB.
