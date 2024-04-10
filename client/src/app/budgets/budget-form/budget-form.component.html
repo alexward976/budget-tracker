@@ -1,0 +1,44 @@
+<form
+  class="row"
+  [formGroup]="service.budgetForm"
+  (submit)="onSubmit()"
+  [class.submitted]="submitted"
+>
+  <div class="col-12 mb-3">
+    <label class="form-label">Budget Name *</label>
+    <input class="form-control form-control-lg" formControlName="name" />
+  </div>
+  <div class="col-12 mb-3">
+    <label class="form-label">Date (Month and Year)</label>
+    <input class="form-control form-control-lg" formControlName="date" />
+  </div>
+  <div class="col-6 mb-3">
+    <label class="form-label">Income *</label>
+    <input
+      type="number"
+      class="form-control form-control-lg"
+      formControlName="income"
+      (keyup)="updateNet()"
+    />
+  </div>
+  <div class="col-6 mb-3">
+    <label class="form-label">Expenses *</label>
+    <input
+      type="number"
+      class="form-control form-control-lg"
+      formControlName="expenses"
+      (keyup)="updateNet()"
+    />
+  </div>
+  <div class="col-12 mb-3">
+    <label class="form-label">Net Income *</label>
+    <input
+      type="number"
+      class="form-control form-control-lg"
+      formControlName="net"
+    />
+  </div>
+  <div class="col-12 d-grid">
+    <button class="btn btn-lg btn-success" type="submit">Add Budget</button>
+  </div>
+</form>
